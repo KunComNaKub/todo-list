@@ -140,3 +140,48 @@ body{
     color:#878895;
     background-color: #373c4f;
 }
+.calendar .days .prev-date,
+.calendar .days .next-date{
+    color: red;
+}
+.calendar .days .active{
+    position: relative;
+    font-size: 2rem;
+    background-color: rgb(230, 209, 209);
+}
+.calendar .days .active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 3px rgb(42, 189, 64);
+}
+.calendar .days .today {
+    font-size: 2rem;
+}
+.calendar .days .event{
+    position: relative;
+}
+.calendar .days .event::after{
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width:  75%;
+    height: 6px;
+    border-radius: 30ex;
+    transform: translateX(-50%);
+    background-color: red;
+}
+.calendar .evet:hover::after{
+    background-color: #fff;
+}
+.calendar .active::after{
+    background-color: #fff;
+    bottom: 20%;
+}
+.calendar .active.event{
+    padding-bottom: 10px;
+}
